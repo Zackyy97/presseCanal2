@@ -18,6 +18,7 @@ html{
         --textiary-font-family: "Inter", sans-serif;
         --logo-color:#79AC78;
         --bg-color:#618264;
+        --secondary-color-font:#443434;
         --webkit-margin-start:left 64px;
 }
 body{
@@ -64,7 +65,7 @@ header{
     transition: all linear 2s;
 }
 /*  when coding they is a norm to follow that is the block element modofier(BEM) */
-/* .ul_nav>Li>a::after{
+ .ul_nav>Li>a::after{
         content: '';
         position: absolute;
         width: 0%;
@@ -73,50 +74,65 @@ header{
         bottom: 0;
         left: 0;A
         background-color:var(--logo-color);
-        transition: transform 0.25s ease-out;
+        transition : transform 0.25s ease-out;
 }
 .ul_nav>li>:hover::after{
     width: 100%;
-} */
+}
  
- /* BOX SISING *  /
+ /* BOX SISING */
 .logo{
     margin-top: 4px;
     margin-left: 48px;
-
 }
 .logo>a>img{
     height: 89px;
     width:113px;
 } 
 .logo2{
-    margin-top: 20px;
-    margin-right: 48px;
+    padding-left: 3.3rem;
+    margin: 2rem 2.8rem 0rem 8rem ;
+    color: white;
+    border: #618264 solid 1rem;
+    border-radius: 3rem;
+    background-color:#618264;
+    width: 9rem;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 1.3rem;
+    
 }
-.material-symbols-outlined {
-    margin-top: 40px;
-    width: 30px;
-    height: 30px;
-  
-}
-        /* secton une image de nganou et .... */
+         /* secton une image de nganou et  */
 .container{
     margin-left: 54px;
-    height: 75vh;
+    /* height: 100vh; */
     width: 100%;
     display: flex;
 }
      /* image de droite du bat de header */
 
+ header>.material-symbols-outlined{
+        display: none;
+     }
 .child1{
     flex: 2;
-    background:url(./pics/ngaNOU.svg)center/no-repeat;
+   
+    /* background-color: #ff3422; */
+    margin-right: 1rem;
+    background-image: url('../pics/ngaNOU.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    /* width: 40rem; */
+    
 }
 .child2{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2.2rem;
+    /* gap: 2.2rem; */
+    background-color: #618264;
+    justify-content:space-between;
 
 }
 .child1>.b{
@@ -452,19 +468,258 @@ footer {
   }
   
   .logo-footer {
-    width: 25rem;
-    height: 30rem;
+    padding-top: 2rem;
+    width: 20rem;
+    height: 25rem;
   }
   
   .icon {
     display: flex;
     gap: 3rem;
  }
+/* <!-- ----------------------------------------------------------------------------Mobile first version  of the canal2 website ------------------------------------------------------------------------- -->
+ */
 
-
-/* @media screen and (max-width:300px){ 
+@media screen and (max-width:300px){ 
         .logo>.material-symbols-outlined{
-                display: none;
+                
         }
+        *{
+            border: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size:10px;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        /* ------------------------------------------------------en-tete-------------------------------------------------------------- */
+        header{
+            margin: 0.2rem 1.7rem;
+        
+        }
+        .header_entete{
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+        }
+        /* <!-- ------------------------------------------------------------body\section1----------------------------------------------------- --> */
+        .section_1{
+            margin: 0.2rem 1.0rem;
+        }
+        .img_presentation-pic{
+            margin: 2rem 1rem;
+        }
+        .presentation_pic_left_side_text_and_bar{
+            display: flex;
+            margin: 0.3rem 2rem;
+            gap: 0.8rem;
+        }
+        .bar{
+            border: solid var(--primary-color);
+            height: 3rem;
+            width: 1.1rem;
+            background-color: var(--primary-color);
+        }
+        .text{
+            font-family: var(--secondary-font-ibm-plex-sans);
+            font-size: 1.6rem;
+            font-weight: 600; 
+            margin-top: 1.2rem;
+        }
+        .left_side_text_and_bar_view{
+            margin: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            column-gap: 3rem;
+        }
+        .left_side_text_and_bar_1{
+            display: flex;
+            margin: 0.3rem 1.3rem;
+            gap: 2rem;
+        
+        }
+        .bar_1_img{
+            flex: 1;
+            display: flex; 
+        }
+        .bar_img_text{
+            flex: 1;
+            gap: 1.9rem;
+            flex-direction: column;
+        }
+        .left_side_text_and_bar_1>.bar_img_te>h3{
+            font-family: var(--secondary-font-ibm-plex-sans);
+            font-size: 4.6rem;
+            font-weight: 600;
+            line-height: 2.8rem;
+        }
+        .left_side_text_and_bar_1>.bar_img_te>h5{
+            font-family: var(--primary-font-inter);
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.634rem;
+            color: var(--secondary-color-font);
+        }
+        .hline{
+            border:  var(--secondary-color-font) 9px;
+            justify-content: center;
+            align-items: center;
+            height: 1px;
+            background-color:var(--secondary-color-font);
+            margin: 1.5rem 1.5rem 0rem 1.3rem;
+        }
+        /* <!--------------------------------------------------------------section_\2------------------------------------------------------------ */
+        .section_2{
+            display: flex; 
+            margin: 3.3rem 2rem;
+            gap: 2rem;
+            flex-direction: column;
+        }
+        .enfant_actu{
+            /* flex-direction: row; */
+            margin: 4.7rem 2rem;    
+        }
+        .enfant_actu>h5{
+            margin-top: .5rem;
+            color: var(--primary-color);
+            font-family: var(--primary-font-inter);
+            font-size: 1.3rem;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 1.573rem;
+        }
+        .enfant_act>h2{
+            font-family: IBM Plex Sans Hebrew;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 2.34rem;
+            color: #000E01;
+         }
+         .actu_video1{
+            margin: 3.3rem 2rem;
+            justify-content: center;
+            align-items: center;
+         }
+         span{
+            margin-left: 12rem;
+         }
+         /* <!------------------------------------------------------------body\section_3--------------------------------------------------------------------- --> */
+         .section_3{
+            margin: 3.3rem 2rem;
+         }
+         .mini_logo{
+            margin: 2rem 2rem;
+            gap: 2rem;
+            display: flex;
+         }
+         .both_actu_display{
+            display: flex;
+            flex-direction: row;
+            gap: 2.7rem;
+            margin: 5.7rem 0rem 1rem 4rem;
+        
+         }
+         .nouschezvous{
+            flex: 1;    
+            width: 10rem;
+            height: 24rem;
+         }
+         .m2{
+            height: 80%;
+            width: 90%;
+            border:#D9D9D9 solid 1px;
+         }
+         .m22{
+        
+         }
+         .arene{
+            flex: 1;
+            width: 10rem;
+            height: 24rem;
+         }
+          .canalimg11{
+            margin: 0REM 2rem;
+         } 
+         .canaltext11{
+            margin: 0REM 2rem;
+         }
+         /* ---------------------------------------------------------------------body\section_4------------------------------------------------------- */
+         .section_4{
+            /* margin: 4rem 2rem; */
+         }
+         .title2{
+            display: flex;
+            flex-direction: row;
+            margin: 1rem 2rem ;
+         }
+         .bar2{
+            border: solid var(--primary-color);
+            height: 4.2rem;
+            width: 1.1rem;
+            background-color: var(--primary-color);
+         }
+         .text2{
+            margin-left: 1.3rem;
+            color:var(--primary-color) ;
+            font-size: 3rem;
+         }
+         .pancarte_SM{
+            margin: 2rem;
+         }
+         .double_section_2{
+            display: flex;
+            flex-direction: row;
+            margin:3rem 2rem 2rem 2rem ;
+            gap:3rem;
+            width: 100%;
+            height: 27rem;
+         }
+         .enfant_actu2{
+            flex: 1;
+         }
+        .etat_actu2{
+            flex: 1;
+            padding-top: 2rem;
+        }
+        .etat_actu2>h5{
+            margin-top: 0;
+        }
+        .etat_actu2>img{
+            height: 20rem;
+            width: 18rem;
+            justify-content: center;
+        
+        }
+        footer {
+            background:var(--footer-color);
+            height: 30rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+          }
+          
+          .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .logo-footer {
+            padding-top: 7rem;
+            width: 15rem;
+            height: 20rem;
+          }
+          .sizing{
+            height: 4rem;
+            width: 3rem;
+          }
+          .icon {
+            display: flex;
+            gap: 3rem;
+            padding-bottom: 13rem;
+         }
 
-} */
+}
